@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block head %}
+    <title>Carbon Scaler</title>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <h1 class="title">Calculator</h1>
+        <form action="{{url_for('form')}}" method="POST">
+            <div class="detailBox">
+                <div class="input">
+                    <span class="details">Distance</span>
+                    <input type="number" id="distanceInput" name="distanceInput" placeholder="Km" required>
+                </div>
+                <div class="input">
+                    <span class="details">Fuel Type</span>
+                    <select id="fuelInput" name="fuelInput">
+                        <option value="petrol">Petrol</option>
+                        <option value="diesel">Diesel</option>  
+                      </select>
+                </div>
+                <div class="input">
+                    <span class="details">Fuel Consumed</span>
+                    <input type="number" id="fuelConsumed" name="fuelConsumed" placeholder="L(litres)" required>
+                </div>
+            </div>
+            
+            <div class="button">
+                <input type="submit" value="SUBMIT">
+            </div>
+        </form>
+    </div>
+{% endblock %}
