@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+  background: linear-gradient(135deg,#71b7e6, #9b59b6);
+  font-family: 'Bree Serif', serif;
+}
+
+.container {
+  padding: 1rem;
+  max-width: 25rem;
+  width: 100%;
+  background: #fff;
+  border-radius: 1rem;
+letter-spacing: .1rem;
+
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 500;
+  position: relative;
+}
+.title::before{
+  content: " ";
+  position: absolute;
+  height: .2rem;
+  width: 2rem;
+  top: 2.5rem;
+  left: 0;
+  background: linear-gradient(135deg,#71b7e6, #9b59b6);
+  border-radius: 1rem;
+}
+.detailBox{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.input{
+  margin: 0 0 2rem 0;
+  /* width: calc(100% / 2 - 3rem); */
+}
+
+.details{
+display: block;
+font-weight: 500;
+font-size: 1.5rem;
+margin-bottom: .5rem;
+}
+
+.input input , select{
+  height: 3rem;
+  width: 100%;
+  border-radius: .5rem;
+  border: 1px solid #ccc;
+  padding-left: .9rem;
+  font-size: 1.2rem;
+  border-bottom-width: .2rem;
+  outline: none;
+  transition: all 1s ;
+}
+
+input:focus,
+input:valid{
+  border-color: #9b59b6;
+}
+
+form .button{
+  height: 3rem;
+  width: 8rem;
+  margin: 2rem auto;
+}
+
+form .button input{
+  height: 100%;
+  width:100%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  border-radius: .3rem;
+  background-image: linear-gradient(135deg,#71b7e6, #9b59b6);
+  cursor: pointer;
+  transition: all 1s;
+}
+
+form .button input:hover{
+  background-image: linear-gradient(10deg,#71b7e6, #9b59b6);
+  scale: 1.1;
+}
