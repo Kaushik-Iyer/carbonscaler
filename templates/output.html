@@ -6,17 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carbon Scaler</title>
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='output.css')}}">
 </head>
 <body>
     <div class="container">
         <h1 class="title">Trip Details:</h1>
         <div class="heading">
-        Your total Co<sub>2</sub> Emission for <b <span id="km">100</span>km</b> is :
+        Your total Co<sub>2</sub> Emission for <b <span id="km">{{distance}}</span>km</b> is :
         </div>
         <div class="output">
-            <span id="result">132</span>gm of Co<sub>2</sub>
+            <span id="result">{{emissions}}</span>gm of Co<sub>2</sub>
         </div>
+        <div class="comparison">
+            <span id="comparison"> Your vehicular emissions are {{percentage}} percent {{keyword}} than the average monthly emission!</span>
+        </div>
+
     </div>
 </body>
 </html>
